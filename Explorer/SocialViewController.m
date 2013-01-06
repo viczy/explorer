@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    // Change the bar's style.
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.navigationItem.title = NSLocalizedString(@"social", @"");
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,25 +22,32 @@
 
 
     NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:@"NoticeView" bundle:nil];
-    noticeViewController.tabBarItem.title = @"通知";
+    noticeViewController.tabBarItem.title = NSLocalizedString(@"notice", @"");
     noticeViewController.tabBarItem.image = [UIImage imageNamed:@"Notice.png"];
 
     ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:@"ChatsView" bundle:nil];
-    chatsViewController.tabBarItem.title = @"私信";
+    chatsViewController.tabBarItem.title = NSLocalizedString(@"chats", @"");
     chatsViewController.tabBarItem.image = [UIImage imageNamed:@"Chats.png"];
 
     SocialViewController *socialViewController = [[SocialViewController alloc] initWithNibName:@"SocialView" bundle:nil];
-    socialViewController.tabBarItem.title = @"社区";
+    socialViewController.tabBarItem.title = NSLocalizedString(@"social", @"");
     socialViewController.tabBarItem.image = [UIImage imageNamed:@"Social.png"];
 
     SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView" bundle:nil];
-    settingsViewController.tabBarItem.title = @"设置";
+    settingsViewController.tabBarItem.title = NSLocalizedString(@"settings", @"");
     settingsViewController.tabBarItem.image = [UIImage imageNamed:@"Settings.png"];
+
+    // Init a new nav controller as container to include setting view.
+    UINavigationController *noticeNavigationController = [[UINavigationController alloc] initWithRootViewController:noticeViewController];
+    UINavigationController *chatsNavigationController = [[UINavigationController alloc] initWithRootViewController:chatsViewController];
+    UINavigationController *socialNavigationController = [[UINavigationController alloc] initWithRootViewController:socialViewController];
+    UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    
 
     self.rootTabViewController = [[UITabBarController alloc] init];
 
     self.rootTabViewController.delegate = self;
-    self.rootTabViewController.viewControllers = @[noticeViewController, chatsViewController, socialViewController, settingsViewController];
+    self.rootTabViewController.viewControllers = @[noticeNavigationController, chatsNavigationController, socialNavigationController, settingsNavigationController];
     
     self.window.rootViewController = self.rootTabViewController;
     

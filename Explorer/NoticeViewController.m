@@ -28,8 +28,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-    // init the navigation bar.
-    
+    // Change the bar's style.
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.navigationItem.title = NSLocalizedString(@"notice", @"");
 }
 
 - (void)didReceiveMemoryWarning
