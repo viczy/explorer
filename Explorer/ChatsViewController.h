@@ -1,5 +1,5 @@
 //
-//  mainViewController.h
+//  ChatsViewController.h
 //  Explorer
 //
 //  Created by Lanvige Jiang on 1/6/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface ChatsViewController : UIViewController
 
 @end

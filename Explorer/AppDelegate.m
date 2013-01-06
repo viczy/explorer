@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 
-#import "MainViewController.h"
+#import "NoticeViewController.h"
+#import "ChatsViewController.h"
+#import "SocialViewController.h"
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -18,24 +21,28 @@
     // Override point for customization after application launch.
 
 
-    MainViewController *viewController = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
-    viewController.title = @"通知";
+    NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:@"NoticeView" bundle:nil];
+    noticeViewController.tabBarItem.title = @"通知";
+    noticeViewController.tabBarItem.image = [UIImage imageNamed:@"Notice.png"];
 
-    MainViewController *viewController2 = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
-    viewController2.title = @"私信";
+    ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:@"ChatsView" bundle:nil];
+    chatsViewController.tabBarItem.title = @"私信";
+    chatsViewController.tabBarItem.image = [UIImage imageNamed:@"Chats.png"];
 
-    MainViewController *viewController3 = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
-    viewController3.title = @"社区";
+    SocialViewController *socialViewController = [[SocialViewController alloc] initWithNibName:@"SocialView" bundle:nil];
+    socialViewController.tabBarItem.title = @"社区";
+    socialViewController.tabBarItem.image = [UIImage imageNamed:@"Social.png"];
 
-    MainViewController *viewController4 = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
-    viewController4.title = @"消息";
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView" bundle:nil];
+    settingsViewController.tabBarItem.title = @"设置";
+    settingsViewController.tabBarItem.image = [UIImage imageNamed:@"Settings.png"];
 
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    self.rootTabViewController = [[UITabBarController alloc] init];
 
-    tabBarController.delegate = self;
-    tabBarController.viewControllers = @[viewController, viewController2, viewController3, viewController4];
+    self.rootTabViewController.delegate = self;
+    self.rootTabViewController.viewControllers = @[noticeViewController, chatsViewController, socialViewController, settingsViewController];
     
-    self.window.rootViewController = tabBarController;
+    self.window.rootViewController = self.rootTabViewController;
     
     [self.window makeKeyAndVisible];
     return YES;

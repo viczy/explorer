@@ -16,13 +16,23 @@
 		385D47B81699781F00731895 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47B71699781F00731895 /* Default.png */; };
 		385D47BA1699781F00731895 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47B91699781F00731895 /* Default@2x.png */; };
 		385D47BC1699781F00731895 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47BB1699781F00731895 /* Default-568h@2x.png */; };
-		385D47BF1699781F00731895 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47BE1699781F00731895 /* MainViewController.m */; };
-		385D47C21699781F00731895 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D47C01699781F00731895 /* MainView.xib */; };
 		385D47D816997A9C00731895 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47D316997A9C00731895 /* Default-568h@2x.png */; };
 		385D47D916997A9C00731895 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47D416997A9C00731895 /* Default.png */; };
 		385D47DA16997A9C00731895 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47D516997A9C00731895 /* Default@2x.png */; };
 		385D47DB16997A9C00731895 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47D616997A9C00731895 /* Icon.png */; };
 		385D47DC16997A9C00731895 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D47D716997A9C00731895 /* Icon@2x.png */; };
+		385D47F41699AA6800731895 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F31699AA6800731895 /* NoticeViewController.m */; };
+		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
+		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
+		385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsViewController.m */; };
+		385D48031699AC0100731895 /* NoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48021699AC0100731895 /* NoticeView.xib */; };
+		385D48051699AC0E00731895 /* ChatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48041699AC0E00731895 /* ChatsView.xib */; };
+		385D48071699AC1C00731895 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48061699AC1C00731895 /* SocialView.xib */; };
+		385D48091699AC2F00731895 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48081699AC2F00731895 /* SettingsView.xib */; };
+		385D480F1699B0C900731895 /* Chats.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D480B1699B0C900731895 /* Chats.png */; };
+		385D48101699B0C900731895 /* Notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D480C1699B0C900731895 /* Notice.png */; };
+		385D48111699B0C900731895 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D480D1699B0C900731895 /* Settings.png */; };
+		385D48121699B0C900731895 /* Social.png in Resources */ = {isa = PBXBuildFile; fileRef = 385D480E1699B0C900731895 /* Social.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,15 +49,28 @@
 		385D47B71699781F00731895 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		385D47B91699781F00731895 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		385D47BB1699781F00731895 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		385D47BD1699781F00731895 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		385D47BE1699781F00731895 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		385D47C11699781F00731895 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainView.xib; sourceTree = "<group>"; };
 		385D47CD1699790E00731895 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		385D47D316997A9C00731895 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		385D47D416997A9C00731895 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		385D47D516997A9C00731895 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		385D47D616997A9C00731895 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		385D47D716997A9C00731895 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		385D47F21699AA6800731895 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		385D47F31699AA6800731895 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
+		385D47F61699AB3700731895 /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		385D47F71699AB3700731895 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		385D47F91699AB4A00731895 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		385D47FC1699AB6200731895 /* ChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsViewController.h; sourceTree = "<group>"; };
+		385D47FD1699AB6200731895 /* ChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsViewController.m; sourceTree = "<group>"; };
+		385D48021699AC0100731895 /* NoticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeView.xib; sourceTree = "<group>"; };
+		385D48041699AC0E00731895 /* ChatsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatsView.xib; sourceTree = "<group>"; };
+		385D48061699AC1C00731895 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
+		385D48081699AC2F00731895 /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		385D480B1699B0C900731895 /* Chats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chats.png; sourceTree = "<group>"; };
+		385D480C1699B0C900731895 /* Notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notice.png; sourceTree = "<group>"; };
+		385D480D1699B0C900731895 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		385D480E1699B0C900731895 /* Social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Social.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +145,14 @@
 		385D47CE169979BE00731895 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				385D47BD1699781F00731895 /* MainViewController.h */,
-				385D47BE1699781F00731895 /* MainViewController.m */,
+				385D47FC1699AB6200731895 /* ChatsViewController.h */,
+				385D47FD1699AB6200731895 /* ChatsViewController.m */,
+				385D47F21699AA6800731895 /* NoticeViewController.h */,
+				385D47F31699AA6800731895 /* NoticeViewController.m */,
+				385D47F91699AB4A00731895 /* SettingsViewController.h */,
+				385D47FA1699AB4A00731895 /* SettingsViewController.m */,
+				385D47F61699AB3700731895 /* SocialViewController.h */,
+				385D47F71699AB3700731895 /* SocialViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -138,7 +167,10 @@
 		385D47D0169979DC00731895 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				385D47C01699781F00731895 /* MainView.xib */,
+				385D48021699AC0100731895 /* NoticeView.xib */,
+				385D48041699AC0E00731895 /* ChatsView.xib */,
+				385D48061699AC1C00731895 /* SocialView.xib */,
+				385D48081699AC2F00731895 /* SettingsView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -154,6 +186,7 @@
 		385D47D216997A9C00731895 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				385D480A1699B0C900731895 /* Tabbar */,
 				385D47D316997A9C00731895 /* Default-568h@2x.png */,
 				385D47D416997A9C00731895 /* Default.png */,
 				385D47D516997A9C00731895 /* Default@2x.png */,
@@ -161,6 +194,17 @@
 				385D47D716997A9C00731895 /* Icon@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		385D480A1699B0C900731895 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				385D480B1699B0C900731895 /* Chats.png */,
+				385D480C1699B0C900731895 /* Notice.png */,
+				385D480D1699B0C900731895 /* Settings.png */,
+				385D480E1699B0C900731895 /* Social.png */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,12 +264,19 @@
 				385D47B81699781F00731895 /* Default.png in Resources */,
 				385D47BA1699781F00731895 /* Default@2x.png in Resources */,
 				385D47BC1699781F00731895 /* Default-568h@2x.png in Resources */,
-				385D47C21699781F00731895 /* MainView.xib in Resources */,
 				385D47D816997A9C00731895 /* Default-568h@2x.png in Resources */,
 				385D47D916997A9C00731895 /* Default.png in Resources */,
 				385D47DA16997A9C00731895 /* Default@2x.png in Resources */,
 				385D47DB16997A9C00731895 /* Icon.png in Resources */,
 				385D47DC16997A9C00731895 /* Icon@2x.png in Resources */,
+				385D48031699AC0100731895 /* NoticeView.xib in Resources */,
+				385D48051699AC0E00731895 /* ChatsView.xib in Resources */,
+				385D48071699AC1C00731895 /* SocialView.xib in Resources */,
+				385D48091699AC2F00731895 /* SettingsView.xib in Resources */,
+				385D480F1699B0C900731895 /* Chats.png in Resources */,
+				385D48101699B0C900731895 /* Notice.png in Resources */,
+				385D48111699B0C900731895 /* Settings.png in Resources */,
+				385D48121699B0C900731895 /* Social.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +289,10 @@
 			files = (
 				385D47B21699781F00731895 /* main.m in Sources */,
 				385D47B61699781F00731895 /* AppDelegate.m in Sources */,
-				385D47BF1699781F00731895 /* MainViewController.m in Sources */,
+				385D47F41699AA6800731895 /* NoticeViewController.m in Sources */,
+				385D47F81699AB3700731895 /* SocialViewController.m in Sources */,
+				385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */,
+				385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,14 +306,6 @@
 				385D47CD1699790E00731895 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		385D47C01699781F00731895 /* MainView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				385D47C11699781F00731895 /* en */,
-			);
-			name = MainView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
