@@ -6,18 +6,37 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
-#import "mainAppDelegate.h"
+#import "AppDelegate.h"
 
-#import "mainViewController.h"
+#import "MainViewController.h"
 
-@implementation mainAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[mainViewController alloc] initWithNibName:@"mainViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+
+
+    MainViewController *viewController = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
+    viewController.title = @"通知";
+
+    MainViewController *viewController2 = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
+    viewController2.title = @"私信";
+
+    MainViewController *viewController3 = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
+    viewController3.title = @"社区";
+
+    MainViewController *viewController4 = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
+    viewController4.title = @"消息";
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+
+    tabBarController.delegate = self;
+    tabBarController.viewControllers = @[viewController, viewController2, viewController3, viewController4];
+    
+    self.window.rootViewController = tabBarController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

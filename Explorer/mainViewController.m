@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
-#import "mainViewController.h"
+#import "MainViewController.h"
 
-@interface mainViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation mainViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {
