@@ -31,6 +31,11 @@
     // Change the bar's style.
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.navigationItem.title = NSLocalizedString(@"chats", @"");
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                              target:self
+                                              action:@selector(addSharing:)];
 }
 
 - (void)didReceiveMemoryWarning

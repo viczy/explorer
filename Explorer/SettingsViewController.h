@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+     NSArray *items; 
+}
+
+@property (nonatomic,retain) NSArray *items;
 
 @end

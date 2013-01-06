@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NoticeViewController : UIViewController
+@interface NoticeViewController : UIViewController <UITableViewDelegate,
+                                                UITableViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *listData;
 
 @end
