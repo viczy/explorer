@@ -24,6 +24,7 @@
     NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:@"NoticeView" bundle:nil];
     noticeViewController.tabBarItem.title = NSLocalizedString(@"notice", @"");
     noticeViewController.tabBarItem.image = [UIImage imageNamed:@"Notice.png"];
+    noticeViewController.tabBarItem.badgeValue = @"2";
 
     ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:@"ChatsView" bundle:nil];
     chatsViewController.tabBarItem.title = NSLocalizedString(@"chats", @"");
