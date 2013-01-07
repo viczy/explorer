@@ -21,20 +21,24 @@
     // Override point for customization after application launch.
 
 
-    NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:nil bundle:nil];
+    NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:nil
+                                                                                        bundle:nil];
     noticeViewController.tabBarItem.title = NSLocalizedString(@"notice", @"");
     noticeViewController.tabBarItem.image = [UIImage imageNamed:@"notice_tabbar.png"];
     noticeViewController.tabBarItem.badgeValue = @"2";
 
-    ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:@"ChatsView" bundle:nil];
+    ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:nil
+                                                                                     bundle:nil];
     chatsViewController.tabBarItem.title = NSLocalizedString(@"chats", @"");
     chatsViewController.tabBarItem.image = [UIImage imageNamed:@"chats_tabbar.png"];
 
-    SocialViewController *socialViewController = [[SocialViewController alloc] initWithNibName:@"SocialView" bundle:nil];
+    SocialViewController *socialViewController = [[SocialViewController alloc] initWithNibName:@"SocialView"
+                                                                                        bundle:nil];
     socialViewController.tabBarItem.title = NSLocalizedString(@"social", @"");
     socialViewController.tabBarItem.image = [UIImage imageNamed:@"social_tabbar.png"];
 
-    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView" bundle:nil];
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView"
+                                                                                              bundle:nil];
     settingsViewController.tabBarItem.title = NSLocalizedString(@"settings", @"");
     settingsViewController.tabBarItem.image = [UIImage imageNamed:@"settings_tabbar.png"];
 

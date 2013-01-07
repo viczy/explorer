@@ -10,7 +10,6 @@
 
 @interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-//     NSArray *items; 
 }
 
 @property (nonatomic,retain) NSArray *items;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38154372169AFF2100969009 /* ChatsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38154371169AFF2100969009 /* ChatsListCell.m */; };
+		38154375169AFF6B00969009 /* EPChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38154374169AFF6B00969009 /* EPChat.m */; };
 		385D47A61699781F00731895 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D47A51699781F00731895 /* UIKit.framework */; };
 		385D47A81699781F00731895 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D47A71699781F00731895 /* Foundation.framework */; };
 		385D47AA1699781F00731895 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D47A91699781F00731895 /* CoreGraphics.framework */; };
@@ -22,7 +24,6 @@
 		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
 		385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsViewController.m */; };
-		385D48051699AC0E00731895 /* ChatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48041699AC0E00731895 /* ChatsView.xib */; };
 		385D48071699AC1C00731895 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48061699AC1C00731895 /* SocialView.xib */; };
 		385D48091699AC2F00731895 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48081699AC2F00731895 /* SettingsView.xib */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
@@ -37,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38154370169AFF2100969009 /* ChatsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListCell.h; sourceTree = "<group>"; };
+		38154371169AFF2100969009 /* ChatsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListCell.m; sourceTree = "<group>"; };
+		38154373169AFF6B00969009 /* EPChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPChat.h; sourceTree = "<group>"; };
+		38154374169AFF6B00969009 /* EPChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPChat.m; sourceTree = "<group>"; };
 		385D47A11699781F00731895 /* Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385D47A51699781F00731895 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		385D47A71699781F00731895 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,7 +69,6 @@
 		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		385D47FC1699AB6200731895 /* ChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsViewController.h; sourceTree = "<group>"; };
 		385D47FD1699AB6200731895 /* ChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsViewController.m; sourceTree = "<group>"; };
-		385D48041699AC0E00731895 /* ChatsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatsView.xib; sourceTree = "<group>"; };
 		385D48061699AC1C00731895 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
 		385D48081699AC2F00731895 /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				38FC2C80169A5AD9009C121C /* EPModelBase.m */,
 				38FC2C82169A5B10009C121C /* EPNotice.h */,
 				38FC2C83169A5B10009C121C /* EPNotice.m */,
+				38154373169AFF6B00969009 /* EPChat.h */,
+				38154374169AFF6B00969009 /* EPChat.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -185,11 +191,12 @@
 		385D47D0169979DC00731895 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				385D48041699AC0E00731895 /* ChatsView.xib */,
 				385D48061699AC1C00731895 /* SocialView.xib */,
 				385D48081699AC2F00731895 /* SettingsView.xib */,
 				38FC2C7B169A5A82009C121C /* NoticeCell.h */,
 				38FC2C7C169A5A82009C121C /* NoticeCell.m */,
+				38154370169AFF2100969009 /* ChatsListCell.h */,
+				38154371169AFF2100969009 /* ChatsListCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -286,7 +293,6 @@
 				385D47DA16997A9C00731895 /* Default@2x.png in Resources */,
 				385D47DB16997A9C00731895 /* Icon.png in Resources */,
 				385D47DC16997A9C00731895 /* Icon@2x.png in Resources */,
-				385D48051699AC0E00731895 /* ChatsView.xib in Resources */,
 				385D48071699AC1C00731895 /* SocialView.xib in Resources */,
 				385D48091699AC2F00731895 /* SettingsView.xib in Resources */,
 				38E199D01699C203000F30A2 /* Localizable.strings in Resources */,
@@ -330,6 +336,8 @@
 				38FC2C7D169A5A82009C121C /* NoticeCell.m in Sources */,
 				38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */,
 				38FC2C84169A5B10009C121C /* EPNotice.m in Sources */,
+				38154372169AFF2100969009 /* ChatsListCell.m in Sources */,
+				38154375169AFF6B00969009 /* EPChat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
