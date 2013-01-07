@@ -21,13 +21,11 @@
         cellWidth = 240.000;
         cellHeight = 0.000;
 
-        // Notice Info
-
+        // Chat Info
         self.chat = [[EPChat alloc] init];
         self.chat.username = @"Lanvige";
         self.chat.date = @"2013-1-5 16:11";
         self.chat.content = @"或者和老公一起租住，果然老了...";
-
         //
         [self addController];
         [self addContentController];
@@ -60,7 +58,7 @@
     cellHeight = 5 + titleSize.height;
 
     // Title username
-    UILabel *usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 8, 200, 18)];
+    UILabel *usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 8, 200, 18)];
     [usernameLabel setFont:[UIFont fontWithName:@"Helvetica-BoldOblique" size:16]];
     [usernameLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [usernameLabel setTextColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]];
@@ -83,7 +81,7 @@
     cellHeight += contentSize.height + 9;
 
     // Content label
-    UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 35, 240, 20)];
+    UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 33, 240, 20)];
     [contentLabel setText:self.chat.content];
     [contentLabel setFont:[UIFont fontWithName:@"Helvetica" size:14]];
     [contentLabel setLineBreakMode:UILineBreakModeWordWrap];
@@ -97,8 +95,6 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end
