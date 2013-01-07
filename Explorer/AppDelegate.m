@@ -21,7 +21,7 @@
     // Override point for customization after application launch.
 
 
-    NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:@"NoticeView" bundle:nil];
+    NoticeViewController *noticeViewController = [[NoticeViewController alloc] initWithNibName:nil bundle:nil];
     noticeViewController.tabBarItem.title = NSLocalizedString(@"notice", @"");
     noticeViewController.tabBarItem.image = [UIImage imageNamed:@"notice_tabbar.png"];
     noticeViewController.tabBarItem.badgeValue = @"2";

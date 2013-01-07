@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class EPNotice;
+
 @interface NoticeCell : UITableViewCell
+{
+    CGFloat cellWidth;
+    CGFloat cellHeight;
+    
+//    EPNotice *notice;
+}
+
+@property (nonatomic, strong) EPNotice *notice;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier notice:(EPNotice *)notice;
 
 @end

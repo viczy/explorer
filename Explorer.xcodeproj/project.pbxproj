@@ -25,7 +25,6 @@
 		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
 		385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsViewController.m */; };
-		385D48031699AC0100731895 /* NoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48021699AC0100731895 /* NoticeView.xib */; };
 		385D48051699AC0E00731895 /* ChatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48041699AC0E00731895 /* ChatsView.xib */; };
 		385D48071699AC1C00731895 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48061699AC1C00731895 /* SocialView.xib */; };
 		385D48091699AC2F00731895 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48081699AC2F00731895 /* SettingsView.xib */; };
@@ -68,7 +67,6 @@
 		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		385D47FC1699AB6200731895 /* ChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsViewController.h; sourceTree = "<group>"; };
 		385D47FD1699AB6200731895 /* ChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsViewController.m; sourceTree = "<group>"; };
-		385D48021699AC0100731895 /* NoticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeView.xib; sourceTree = "<group>"; };
 		385D48041699AC0E00731895 /* ChatsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatsView.xib; sourceTree = "<group>"; };
 		385D48061699AC1C00731895 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
 		385D48081699AC2F00731895 /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		385D47D0169979DC00731895 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				385D48021699AC0100731895 /* NoticeView.xib */,
 				385D48041699AC0E00731895 /* ChatsView.xib */,
 				385D48061699AC1C00731895 /* SocialView.xib */,
 				385D48081699AC2F00731895 /* SettingsView.xib */,
@@ -295,7 +292,6 @@
 				385D47DA16997A9C00731895 /* Default@2x.png in Resources */,
 				385D47DB16997A9C00731895 /* Icon.png in Resources */,
 				385D47DC16997A9C00731895 /* Icon@2x.png in Resources */,
-				385D48031699AC0100731895 /* NoticeView.xib in Resources */,
 				385D48051699AC0E00731895 /* ChatsView.xib in Resources */,
 				385D48071699AC1C00731895 /* SocialView.xib in Resources */,
 				385D48091699AC2F00731895 /* SettingsView.xib in Resources */,

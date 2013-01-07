@@ -10,4 +10,10 @@
 
 @interface EPNotice : EPModelBase
 
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *avatar;
+@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSString *content;
+@property (nonatomic, assign) NSInteger *commentsNum;
+
 @end

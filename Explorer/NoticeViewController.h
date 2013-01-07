@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NoticeCell.h"
+
 @interface NoticeViewController : UIViewController <UITableViewDelegate,
                                                 UITableViewDataSource>
+{
+//    NSMutableArray *notices;
+}
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSArray *listData;
+@property (nonatomic, strong) NSArray *notices;
 
 @end
