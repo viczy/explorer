@@ -62,7 +62,7 @@
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 
     // Step 3: Set the cell text
-    cell.textLabel.text = [items objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.items objectAtIndex:indexPath.row];
 
     //每一行row進來都判定一下，分別依次選用不同的圖片
     switch (indexPath.row)
