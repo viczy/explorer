@@ -25,7 +25,7 @@
         self.chat = [[EPChat alloc] init];
         self.chat.username = @"Lanvige";
         self.chat.date = @"2013-1-5 16:11";
-        self.chat.content = @"或者和老公一起租住，果然老了...";
+        self.chat.content = @"或者和老公一起租住，果然老了果然老了果然老了";
         //
         [self addController];
         [self addContentController];
@@ -89,6 +89,8 @@
     [contentLabel setTextAlignment:UITextAlignmentLeft];
     [contentLabel setTextColor:[UIColor grayColor]];
     [contentLabel setBackgroundColor:[UIColor clearColor]];
+    contentLabel.numberOfLines = 1;
+    contentLabel.lineBreakMode = UILineBreakModeTailTruncation;
     [self addSubview:contentLabel];
 }
 

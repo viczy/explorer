@@ -6,9 +6,12 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
+// http://stackoverflow.com/questions/1071112/uiviews-frame-bounds-center-origin-when-to-use-what
+
 #import "ChatsViewController.h"
 
 #import "ChatsListCell.h"
+
 
 @interface ChatsViewController ()
 
@@ -42,7 +45,7 @@
     // 初始化表中数组
     self.chatsList = @[@"Sleepy", @"Sneezy", @"Bashful", @"Happy", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bofur",@"Bombur"];
 
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+    self.tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]
                                                   style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
