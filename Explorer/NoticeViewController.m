@@ -39,8 +39,11 @@
     self.listData = @[@"Sleepy", @"Sneezy", @"Bashful", @"Happy", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bofur",@"Bombur"];
 
 
+    CGRect navBarFrame = self.navigationController.navigationBar.frame;
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+    CGRect r = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - navBarFrame.size.height - tabBarFrame.size.height);
+    self.tableView = [[UITableView alloc] initWithFrame:r
                                                   style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

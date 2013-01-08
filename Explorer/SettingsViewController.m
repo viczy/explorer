@@ -34,7 +34,11 @@
     
     [self initTestData];
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+    CGRect navBarFrame = self.navigationController.navigationBar.frame;
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+    
+    CGRect r = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - navBarFrame.size.height - tabBarFrame.size.height);
+    self.tableView = [[UITableView alloc] initWithFrame:r
                                                   style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor whiteColor    ];
     self.tableView.backgroundView = nil;
@@ -146,14 +150,14 @@
         }
         case 1: {
             cell.textLabel.text = [self.section1Data objectAtIndex:indexPath.row];
-            UIFont *myFont = [UIFont fontWithName:@"Helvetica" size:14];
+            UIFont *myFont = [UIFont fontWithName:@"Arial" size:15];
             cell.textLabel.font = myFont;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         }
         case 2: {
             cell.textLabel.text = [self.section2Data objectAtIndex:indexPath.row];
-            UIFont *myFont = [UIFont fontWithName:@"Helvetica" size:14];
+            UIFont *myFont = [UIFont fontWithName:@"Arial" size:15];
             cell.textLabel.font = myFont;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
