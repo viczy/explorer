@@ -36,7 +36,7 @@
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
                                                   style:UITableViewStyleGrouped];
-    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = [UIColor whiteColor    ];
     self.tableView.backgroundView = nil;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -57,7 +57,7 @@
     self.section1Data = @[@"Item 1", @"Item 2", @"Item 3", @"Item 12"];
     self.section2Data = @[@"Item 11", @"Item 12", @"Item 13", @"Item 14"];
     
-    self.titleArray = @[@"Account", @"Advanced"];
+    self.titleArray = @[@"", @"Account", @"Advanced"];
 }
 
 #pragma mark - TableView Methods
@@ -65,7 +65,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 
@@ -74,8 +74,10 @@
     switch(section)
     {
         case 0:
-            return [self.section1Data count];
+            return 1;
         case 1:
+            return [self.section1Data count];
+        case 2:
             return [self.section2Data count];
 
         default:
@@ -102,22 +104,45 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *CellIdentifier = @"Cell";
+    
     // Step 1: Check to see if we can reuse a cell from a row that has just rolled off the screen
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
 
     // Step 2: If there are no cells to reuse, create a new one
-    if(cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-
+    if(cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    
     // Add a detail view accessory
-//    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    //    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 
 
     switch(indexPath.section)
     {
         case 0:
+        {
+            // Avatar image
+            CGRect avatarRect = CGRectMake(10, 10, 30, 30);
+            UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:avatarRect];
+            avatarImageView.image = [UIImage imageNamed:@"Icon.png"];
+            [cell.contentView addSubview:avatarImageView];
+            
+            // Username
+            CGRect usernameRect = CGRectMake(50, 5, 120, 30);
+            UILabel *label = [[UILabel alloc] initWithFrame:usernameRect];
+            label.tag = 1;
+            label.text = @"Lanvige";
+            label.lineBreakMode = UILineBreakModeWordWrap;
+            label.numberOfLines = 1;
+            label.opaque = NO; // 选中Opaque表示视图后面的任何内容都不应该绘制
+            label.backgroundColor = [UIColor clearColor];
+            [cell.contentView addSubview:label];
+            
+            break;
+        }
+        case 1:
             [[cell textLabel] setText:[self.section1Data objectAtIndex:indexPath.row]];
             break;
-        case 1:
+        case 2:
             [[cell textLabel] setText:[self.section2Data objectAtIndex:indexPath.row]];
             break;
 
@@ -137,6 +162,38 @@
 
     // Step 4: Return the cell
     return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    switch(indexPath.section)
+    {
+        case 0:
+        {
+            return 50.f;
+        }
+    }
+    
+    return  40.f;
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return [self firstSectionTitle];
+        case 1:
+            // ...
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)firstSectionTitle {
+    // generate first section title programmatically, e.g. "return [[NSDate date] description];"
+    return @"generate first section";
 }
 
 @end
