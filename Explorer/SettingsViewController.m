@@ -32,11 +32,16 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.navigationItem.title = NSLocalizedString(@"settings", @"");
 
-    // Set up the NSArray
-    self.section1Data = @[@"Item 1", @"Item 2", @"Item 3", @"Item 12"];
-    self.section2Data = @[@"Item 11", @"Item 12", @"Item 13", @"Item 14"];
-
-    self.titleArray = @[@"Account", @"Advanced"];
+    [self initTestData];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+                                                  style:UITableViewStyleGrouped];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundView = nil;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +50,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)initTestData
+{
+    // Set up the NSArray
+    self.section1Data = @[@"Item 1", @"Item 2", @"Item 3", @"Item 12"];
+    self.section2Data = @[@"Item 11", @"Item 12", @"Item 13", @"Item 14"];
+    
+    self.titleArray = @[@"Account", @"Advanced"];
+}
 
 #pragma mark - TableView Methods
 

@@ -17,4 +17,6 @@
 
 @property (nonatomic, strong) NSArray *titleArray;
 
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @end

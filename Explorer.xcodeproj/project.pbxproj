@@ -25,7 +25,6 @@
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
 		385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsViewController.m */; };
 		385D48071699AC1C00731895 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48061699AC1C00731895 /* SocialView.xib */; };
-		385D48091699AC2F00731895 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48081699AC2F00731895 /* SettingsView.xib */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
 		38FC2C7D169A5A82009C121C /* NoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C7C169A5A82009C121C /* NoticeCell.m */; };
 		38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C80169A5AD9009C121C /* EPModelBase.m */; };
@@ -70,7 +69,6 @@
 		385D47FC1699AB6200731895 /* ChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsViewController.h; sourceTree = "<group>"; };
 		385D47FD1699AB6200731895 /* ChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsViewController.m; sourceTree = "<group>"; };
 		385D48061699AC1C00731895 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
-		385D48081699AC2F00731895 /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E199D31699C20E000F30A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38FC2C7B169A5A82009C121C /* NoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeCell.h; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				385D48061699AC1C00731895 /* SocialView.xib */,
-				385D48081699AC2F00731895 /* SettingsView.xib */,
 				38FC2C7B169A5A82009C121C /* NoticeCell.h */,
 				38FC2C7C169A5A82009C121C /* NoticeCell.m */,
 				38154370169AFF2100969009 /* ChatsListCell.h */,
@@ -294,7 +291,6 @@
 				385D47DB16997A9C00731895 /* Icon.png in Resources */,
 				385D47DC16997A9C00731895 /* Icon@2x.png in Resources */,
 				385D48071699AC1C00731895 /* SocialView.xib in Resources */,
-				385D48091699AC2F00731895 /* SettingsView.xib in Resources */,
 				38E199D01699C203000F30A2 /* Localizable.strings in Resources */,
 				38FC2C89169A5BFB009C121C /* chats_tabbar.png in Resources */,
 				38FC2C8A169A5BFB009C121C /* notice_tabbar.png in Resources */,

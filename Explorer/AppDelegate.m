@@ -37,7 +37,7 @@
     socialViewController.tabBarItem.title = NSLocalizedString(@"social", @"");
     socialViewController.tabBarItem.image = [UIImage imageNamed:@"social_tabbar.png"];
 
-    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView"
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:nil
                                                                                               bundle:nil];
     settingsViewController.tabBarItem.title = NSLocalizedString(@"settings", @"");
     settingsViewController.tabBarItem.image = [UIImage imageNamed:@"settings_tabbar.png"];
