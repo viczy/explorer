@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
-#import "NoticeCell.h"
+#import "NoticeTableViewCell.h"
 
 #import "EPNotice.h"
 
-@implementation NoticeCell
+@implementation NoticeTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier notice:(EPNotice *)notice
 {

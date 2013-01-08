@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
-#import "ChatsListCell.h"
+#import "ChatsListTableViewCell.h"
 
 #import "EPChat.h"
 
-@implementation ChatsListCell
+@implementation ChatsListTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier chat:(EPChat *)chat
 {

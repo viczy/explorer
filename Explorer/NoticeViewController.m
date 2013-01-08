@@ -89,10 +89,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIndentifier = [NSString stringWithFormat:@"cell_%d", indexPath.row];
-    NoticeCell *cell = (NoticeCell *)[tableView cellForRowAtIndexPath:indexPath];
+    NoticeTableViewCell *cell = (NoticeTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 
     if (cell == nil) {
-        cell = [[NoticeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier notice:nil];
+        cell = [[NoticeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier notice:nil];
     }
 
     return cell;

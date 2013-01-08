@@ -8,16 +8,16 @@
 
 // http://stackoverflow.com/questions/1071112/uiviews-frame-bounds-center-origin-when-to-use-what
 
-#import "ChatsViewController.h"
+#import "ChatsListViewController.h"
 
-#import "ChatsListCell.h"
+#import "ChatsListTableViewCell.h"
 
 
-@interface ChatsViewController ()
+@interface ChatsListViewController ()
 
 @end
 
-@implementation ChatsViewController
+@implementation ChatsListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -87,10 +87,10 @@ sectionForSectionIndexTitle:(NSString *)title
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIndentifier = [NSString stringWithFormat:@"cell_%d", indexPath.row];
-    ChatsListCell *cell = (ChatsListCell *)[tableView cellForRowAtIndexPath:indexPath];
+    ChatsListTableViewCell *cell = (ChatsListTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 
     if (cell == nil) {
-        cell = [[ChatsListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier chat:nil];
+        cell = [[ChatsListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier chat:nil];
     }
 
     return cell;
