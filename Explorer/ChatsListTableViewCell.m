@@ -8,6 +8,8 @@
 
 #import "ChatsListTableViewCell.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "EPChat.h"
 
 @implementation ChatsListTableViewCell
@@ -46,6 +48,15 @@
     // Avatar image
     UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 32, 32)];
     avatarImageView.image = [UIImage imageNamed:@"Icon.png"];
+    
+    //设置圆角边框
+    avatarImageView.layer.cornerRadius = 6;
+    avatarImageView.layer.masksToBounds = YES;
+    
+    //设置边框及边框颜色
+    avatarImageView.layer.borderWidth = .5f;
+    avatarImageView.layer.borderColor = [[UIColor grayColor] CGColor];
+    
     [self addSubview:avatarImageView];
 }
 
