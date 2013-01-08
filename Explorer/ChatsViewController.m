@@ -45,7 +45,7 @@
     // 初始化表中数组
     self.chatsList = @[@"Sleepy", @"Sneezy", @"Bashful", @"Happy", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bofur",@"Bombur"];
 
-    self.tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]
+    self.tableView = [[UITableView alloc] initWithFrame:self.navigationController.view.frame
                                                   style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
