@@ -15,6 +15,9 @@
     CGFloat cellWidth;
     CGFloat cellHeight;
     
+    UIFont *titleFont;
+    UIFont *contentFont;
+    
 //    EPNotice *notice;
 }
 
