@@ -152,7 +152,15 @@
             cell.textLabel.text = [self.section1Data objectAtIndex:indexPath.row];
             UIFont *myFont = [UIFont fontWithName:@"Arial" size:15];
             cell.textLabel.font = myFont;
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            // http://stackoverflow.com/questions/4585840/how-to-create-a-uitableviewcell-with-a-uiswitch-and-get-the-data
+            UISwitch *switchview = [[UISwitch alloc] initWithFrame:CGRectZero];
+            [switchview addTarget:self
+                           action:@selector(updateSwitchAtIndexPath)
+                 forControlEvents:UIControlEventTouchUpInside];
+            cell.accessoryView = switchview;
+            
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         }
         case 2: {
@@ -219,6 +227,20 @@
 - (NSString *)firstSectionTitle {
     // generate first section title programmatically, e.g. "return [[NSDate date] description];"
     return @"generate first section";
+}
+
+
+- (void)updateSwitchAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    UISwitch *switchView = (UISwitch *)cell.accessoryView;
+    
+    if ([switchView isOn]) {
+        [switchView setOn:NO animated:YES];
+    } else {
+        [switchView setOn:YES animated:YES];
+    }
+    
 }
 
 @end
