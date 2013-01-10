@@ -24,6 +24,8 @@
 		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
 		385D47FE1699AB6200731895 /* ChatsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsListViewController.m */; };
+		38637C0F169EFA1A001773F1 /* EXDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 38637C0E169EFA1A001773F1 /* EXDefines.m */; };
+		38637C15169EFAC9001773F1 /* UIFont+Explorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38637C14169EFAC9001773F1 /* UIFont+Explorer.m */; };
 		38752A33169E827B001D8B0F /* ChatsListTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38752A32169E827B001D8B0F /* ChatsListTableViewCellView.xib */; };
 		38752A37169E82CA001D8B0F /* SocialListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38752A36169E82CA001D8B0F /* SocialListTableViewCell.m */; };
 		38752B82169E887A001D8B0F /* face1.png in Resources */ = {isa = PBXBuildFile; fileRef = 38752B1B169E887A001D8B0F /* face1.png */; };
@@ -173,6 +175,10 @@
 		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		385D47FC1699AB6200731895 /* ChatsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListViewController.h; sourceTree = "<group>"; };
 		385D47FD1699AB6200731895 /* ChatsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListViewController.m; sourceTree = "<group>"; };
+		38637C0D169EFA1A001773F1 /* EXDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXDefines.h; sourceTree = "<group>"; };
+		38637C0E169EFA1A001773F1 /* EXDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXDefines.m; sourceTree = "<group>"; };
+		38637C13169EFAC9001773F1 /* UIFont+Explorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Explorer.h"; sourceTree = "<group>"; };
+		38637C14169EFAC9001773F1 /* UIFont+Explorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Explorer.m"; sourceTree = "<group>"; };
 		38752A32169E827B001D8B0F /* ChatsListTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatsListTableViewCellView.xib; sourceTree = "<group>"; };
 		38752A35169E82CA001D8B0F /* SocialListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialListTableViewCell.h; sourceTree = "<group>"; };
 		38752A36169E82CA001D8B0F /* SocialListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialListTableViewCell.m; sourceTree = "<group>"; };
@@ -319,9 +325,7 @@
 		385D47961699781E00731895 = {
 			isa = PBXGroup;
 			children = (
-				38FC2D2A169BC70D009C121C /* Categories */,
 				385D47AB1699781F00731895 /* Explorer */,
-				38752BED169E8991001D8B0F /* Utilities */,
 				385D47A41699781F00731895 /* Frameworks */,
 				385D47A21699781F00731895 /* Products */,
 				385D47D116997A9C00731895 /* Resources */,
@@ -351,6 +355,8 @@
 		385D47AB1699781F00731895 /* Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				38FC2D2A169BC70D009C121C /* Categories */,
+				38752BED169E8991001D8B0F /* Utilities */,
 				385D47CF169979D100731895 /* Models */,
 				385D47CE169979BE00731895 /* ViewControllers */,
 				385D47D0169979DC00731895 /* Views */,
@@ -369,6 +375,8 @@
 				385D47B11699781F00731895 /* main.m */,
 				385D47B31699781F00731895 /* Explorer-Prefix.pch */,
 				38E199D21699C203000F30A2 /* Localizable.strings */,
+				38637C0D169EFA1A001773F1 /* EXDefines.h */,
+				38637C0E169EFA1A001773F1 /* EXDefines.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -561,6 +569,7 @@
 				38752BEF169E89B6001D8B0F /* ContentString.m */,
 			);
 			name = Utilities;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		38FC2D2A169BC70D009C121C /* Categories */ = {
@@ -568,8 +577,11 @@
 			children = (
 				38FC2D2B169BC73A009C121C /* UIColor+Explorer.h */,
 				38FC2D2C169BC73A009C121C /* UIColor+Explorer.m */,
+				38637C13169EFAC9001773F1 /* UIFont+Explorer.h */,
+				38637C14169EFAC9001773F1 /* UIFont+Explorer.m */,
 			);
 			name = Categories;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		38FC2D2E169BC7CB009C121C /* Cells */ = {
@@ -798,6 +810,8 @@
 				38FC2D31169BC843009C121C /* NoticeTableViewCell.m in Sources */,
 				38752A37169E82CA001D8B0F /* SocialListTableViewCell.m in Sources */,
 				38752BF0169E89B6001D8B0F /* ContentString.m in Sources */,
+				38637C0F169EFA1A001773F1 /* EXDefines.m in Sources */,
+				38637C15169EFAC9001773F1 /* UIFont+Explorer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
