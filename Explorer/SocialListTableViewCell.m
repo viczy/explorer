@@ -124,6 +124,7 @@
     self.contentLabel.lineHeightMultiple = 1;
     self.contentLabel.verticalAlignment = TTTAttributedLabelVerticalAlignmentTop;
 
+    
     [self.contentLabel setText:self.notice.content afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
 
         NSRange boldRange = [[mutableAttributedString string] rangeOfString:@"TTT attributed" options:NSCaseInsensitiveSearch];
@@ -142,7 +143,11 @@
     }];
 
 
-    [self.contentLabel setBackgroundColor:[UIColor clearColor]];
+
+    NSRange range = [self.contentLabel.text rangeOfString:@"my"];
+    [self.contentLabel addLinkToURL:[NSURL URLWithString:@"http://github.com/mattt/"] withRange:range]; // Embedding a custom link in
+    
+//    [self.contentLabel setBackgroundColor:[UIColor clearColor]];
     [self addSubview:self.contentLabel];
 }
 
