@@ -131,6 +131,7 @@
 		38752BE8169E887A001D8B0F /* face99.gif in Resources */ = {isa = PBXBuildFile; fileRef = 38752B81169E887A001D8B0F /* face99.gif */; };
 		38752BEB169E8889001D8B0F /* emotion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38752BE9169E8889001D8B0F /* emotion.plist */; };
 		38752BEC169E8889001D8B0F /* emotionImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38752BEA169E8889001D8B0F /* emotionImage.plist */; };
+		38752BF0169E89B6001D8B0F /* ContentString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38752BEF169E89B6001D8B0F /* ContentString.m */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
 		38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C80169A5AD9009C121C /* EPModelBase.m */; };
 		38FC2C84169A5B10009C121C /* EPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C83169A5B10009C121C /* EPNotice.m */; };
@@ -158,9 +159,6 @@
 		385D47B31699781F00731895 /* Explorer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Explorer-Prefix.pch"; sourceTree = "<group>"; };
 		385D47B41699781F00731895 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		385D47B51699781F00731895 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		385D47B71699781F00731895 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		385D47B91699781F00731895 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		385D47BB1699781F00731895 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		385D47CD1699790E00731895 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		385D47D316997A9C00731895 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		385D47D416997A9C00731895 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -283,6 +281,8 @@
 		38752B81169E887A001D8B0F /* face99.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = face99.gif; sourceTree = "<group>"; };
 		38752BE9169E8889001D8B0F /* emotion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = emotion.plist; sourceTree = "<group>"; };
 		38752BEA169E8889001D8B0F /* emotionImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = emotionImage.plist; sourceTree = "<group>"; };
+		38752BEE169E89B6001D8B0F /* ContentString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentString.h; sourceTree = "<group>"; };
+		38752BEF169E89B6001D8B0F /* ContentString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentString.m; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E199D31699C20E000F30A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38FC2C7F169A5AD9009C121C /* EPModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPModelBase.h; sourceTree = "<group>"; };
@@ -319,6 +319,7 @@
 		385D47961699781E00731895 = {
 			isa = PBXGroup;
 			children = (
+				38752BED169E8991001D8B0F /* Utils */,
 				38FC2D2A169BC70D009C121C /* Categories */,
 				385D47AB1699781F00731895 /* Explorer */,
 				385D47A41699781F00731895 /* Frameworks */,
@@ -367,9 +368,6 @@
 				385D47AE1699781F00731895 /* InfoPlist.strings */,
 				385D47B11699781F00731895 /* main.m */,
 				385D47B31699781F00731895 /* Explorer-Prefix.pch */,
-				385D47B71699781F00731895 /* Default.png */,
-				385D47B91699781F00731895 /* Default@2x.png */,
-				385D47BB1699781F00731895 /* Default-568h@2x.png */,
 				38E199D21699C203000F30A2 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -554,6 +552,15 @@
 				38752B81169E887A001D8B0F /* face99.gif */,
 			);
 			path = Emotion;
+			sourceTree = "<group>";
+		};
+		38752BED169E8991001D8B0F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				38752BEE169E89B6001D8B0F /* ContentString.h */,
+				38752BEF169E89B6001D8B0F /* ContentString.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		38FC2D2A169BC70D009C121C /* Categories */ = {
@@ -790,6 +797,7 @@
 				38FC2D2D169BC73A009C121C /* UIColor+Explorer.m in Sources */,
 				38FC2D31169BC843009C121C /* NoticeTableViewCell.m in Sources */,
 				38752A37169E82CA001D8B0F /* SocialListTableViewCell.m in Sources */,
+				38752BF0169E89B6001D8B0F /* ContentString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
