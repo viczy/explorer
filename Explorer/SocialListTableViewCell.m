@@ -9,6 +9,12 @@
 #import "SocialListTableViewCell.h"
 
 #import "EPNotice.h"
+#import "RegexKitLite.h"
+#import "TTTAttributedLabel.h"
+
+@interface SocialListTableViewCell () <TTTAttributedLabelDelegate, UIActionSheetDelegate>
+@property (nonatomic, strong) TTTAttributedLabel *contentLabel;
+@end
 
 @implementation SocialListTableViewCell
 
@@ -28,7 +34,7 @@
         self.notice = [[EPNotice alloc] init];
         self.notice.username = @"Lanvige";
         self.notice.date = @"2013-1-5";
-        self.notice.content = @"今儿@上岸晒太阳的小摩 说要帮忙找人合租房子，想了一下，基本没有合适的且认识的女生可以介绍，，这个年龄段的认识的基本都结婚了或者有了自己的房子或者和老公一起租住，想想自己果然老了";
+        self.notice.content = @"I added the TTT attributed label to my project. I want to have 2 different font colors to display the 'likes'. However my project keeps crashing. A sample string to be formatted would be";
         
         [self addAvatarView];
         [self addTitleView];
@@ -41,6 +47,32 @@
     self.selectionStyle = UITableViewCellSelectionStyleGray;
     return self;
 }
+
+
+- (NSString *)transformString:(NSString *)originalStr
+{
+    NSString *text = originalStr;
+    NSString *regex_emoji = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\]";
+    NSArray *array_emoji = [text componentsMatchedByRegex:regex_emoji];
+
+    NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"emotionImage.plist"];
+    NSDictionary *m_EmojiDic = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+    //    NSString *path = [NSString stringWithFormat:@"%@", [[NSBundle mainBundle] bundlePath]];
+
+    if ([array_emoji count]) {
+        for (NSString *str in array_emoji) {
+            NSRange range = [text rangeOfString:str];
+            NSString *i_transCharacter = [m_EmojiDic objectForKey:str];
+            if (i_transCharacter) {
+                NSString *imageHtml = [NSString stringWithFormat:@"<img src='%@' width='16' height='16'>",i_transCharacter];
+                text = [text stringByReplacingCharactersInRange:NSMakeRange(range.location, [str length]) withString:imageHtml];
+            }
+        }
+    }
+    //返回转义后的字符串
+    return text;
+}
+
 
 - (void)addAvatarView
 {
@@ -82,15 +114,36 @@
     cellHeight = 30 + contentSize.height;
     
     // Content label
-    UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 30, 240, contentSize.height)];
-    [contentLabel setText:self.notice.content];
-    [contentLabel setFont:contentFont];
-    [contentLabel setLineBreakMode:UILineBreakModeWordWrap];
-    [contentLabel setNumberOfLines:0];
-    [contentLabel setTextAlignment:UITextAlignmentLeft];
-    //UIColor *org = [UIColor colorWithRed:249.0/255 green:251.0/255 blue:253.0/255 alpha:0];
-    [contentLabel setBackgroundColor:[UIColor clearColor]];
-    [self addSubview:contentLabel];
+    self.contentLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(60, 30, 240, 90)];
+
+    self.contentLabel.delegate = self;
+    self.contentLabel.font = contentFont;
+    self.contentLabel.textColor = [UIColor darkGrayColor];
+    self.contentLabel.lineBreakMode = UILineBreakModeWordWrap;
+    self.contentLabel.numberOfLines = 0;
+    self.contentLabel.lineHeightMultiple = 1;
+    self.contentLabel.verticalAlignment = TTTAttributedLabelVerticalAlignmentTop;
+
+    [self.contentLabel setText:self.notice.content afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+
+        NSRange boldRange = [[mutableAttributedString string] rangeOfString:@"TTT attributed" options:NSCaseInsensitiveSearch];
+        //NSRange strikeRange = [[mutableAttributedString string] rangeOfString:@"合适的且认识" options:NSCaseInsensitiveSearch];
+
+        // Core Text APIs use C functions without a direct bridge to UIFont. See Apple's "Core Text Programming Guide" to learn how to configure string attributes.
+        UIFont *boldSystemFont = [UIFont boldSystemFontOfSize:14];
+        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)boldSystemFont.fontName, boldSystemFont.pointSize, NULL);
+        if (font) {
+            [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:boldRange];
+            //[mutableAttributedString addAttribute:@"TTTStrikeOutAttribute" value:[NSNumber numberWithBool:YES] range:strikeRange];
+            CFRelease(font);
+        }
+
+        return mutableAttributedString;
+    }];
+
+
+    [self.contentLabel setBackgroundColor:[UIColor clearColor]];
+    [self addSubview:self.contentLabel];
 }
 
 - (void)addStatusView

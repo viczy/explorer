@@ -355,13 +355,12 @@
 		385D47AB1699781F00731895 /* Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				38637C2C169F1CF5001773F1 /* Application */,
 				38FC2D2A169BC70D009C121C /* Categories */,
 				38752BED169E8991001D8B0F /* Utilities */,
 				385D47CF169979D100731895 /* Models */,
 				385D47CE169979BE00731895 /* ViewControllers */,
 				385D47D0169979DC00731895 /* Views */,
-				385D47B41699781F00731895 /* AppDelegate.h */,
-				385D47B51699781F00731895 /* AppDelegate.m */,
 				385D47AC1699781F00731895 /* Supporting Files */,
 			);
 			path = Explorer;
@@ -450,6 +449,15 @@
 				38FC2C88169A5BFB009C121C /* social_tabbar.png */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		38637C2C169F1CF5001773F1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				385D47B41699781F00731895 /* AppDelegate.h */,
+				385D47B51699781F00731895 /* AppDelegate.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		38752B1A169E887A001D8B0F /* Emotion */ = {

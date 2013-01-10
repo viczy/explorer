@@ -6,5 +6,6 @@ pod 'AFNetworking'
 pod 'JSONKit'
 
 pod 'MBProgressHUD'
+pod 'TTTAttributedLabel'
 
 pod 'RegexKitLite'
