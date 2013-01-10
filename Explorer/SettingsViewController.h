@@ -12,11 +12,10 @@
 {
 }
 
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @property (nonatomic, strong) NSArray *section1Data;
 @property (nonatomic, strong) NSArray *section2Data;
-
 @property (nonatomic, strong) NSArray *titleArray;
-
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

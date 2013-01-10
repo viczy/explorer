@@ -24,6 +24,8 @@
 		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
 		385D47FE1699AB6200731895 /* ChatsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsListViewController.m */; };
+		38752A33169E827B001D8B0F /* ChatsListTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38752A32169E827B001D8B0F /* ChatsListTableViewCellView.xib */; };
+		38752A37169E82CA001D8B0F /* SocialListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38752A36169E82CA001D8B0F /* SocialListTableViewCell.m */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
 		38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C80169A5AD9009C121C /* EPModelBase.m */; };
 		38FC2C84169A5B10009C121C /* EPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C83169A5B10009C121C /* EPNotice.m */; };
@@ -68,6 +70,9 @@
 		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		385D47FC1699AB6200731895 /* ChatsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListViewController.h; sourceTree = "<group>"; };
 		385D47FD1699AB6200731895 /* ChatsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListViewController.m; sourceTree = "<group>"; };
+		38752A32169E827B001D8B0F /* ChatsListTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatsListTableViewCellView.xib; sourceTree = "<group>"; };
+		38752A35169E82CA001D8B0F /* SocialListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialListTableViewCell.h; sourceTree = "<group>"; };
+		38752A36169E82CA001D8B0F /* SocialListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialListTableViewCell.m; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E199D31699C20E000F30A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38FC2C7F169A5AD9009C121C /* EPModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPModelBase.h; sourceTree = "<group>"; };
@@ -244,6 +249,9 @@
 				38FC2D30169BC843009C121C /* NoticeTableViewCell.m */,
 				38154370169AFF2100969009 /* ChatsListTableViewCell.h */,
 				38154371169AFF2100969009 /* ChatsListTableViewCell.m */,
+				38752A32169E827B001D8B0F /* ChatsListTableViewCellView.xib */,
+				38752A35169E82CA001D8B0F /* SocialListTableViewCell.h */,
+				38752A36169E82CA001D8B0F /* SocialListTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 				38FC2C8A169A5BFB009C121C /* notice_tabbar.png in Resources */,
 				38FC2C8B169A5BFB009C121C /* settings_tabbar.png in Resources */,
 				38FC2C8C169A5BFB009C121C /* social_tabbar.png in Resources */,
+				38752A33169E827B001D8B0F /* ChatsListTableViewCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +361,7 @@
 				38154375169AFF6B00969009 /* EPChat.m in Sources */,
 				38FC2D2D169BC73A009C121C /* UIColor+Explorer.m in Sources */,
 				38FC2D31169BC843009C121C /* NoticeTableViewCell.m in Sources */,
+				38752A37169E82CA001D8B0F /* SocialListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
