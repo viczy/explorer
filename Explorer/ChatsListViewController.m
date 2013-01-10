@@ -6,15 +6,18 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
-#import "ChatsViewController.h"
+// http://stackoverflow.com/questions/1071112/uiviews-frame-bounds-center-origin-when-to-use-what
 
-#import "ChatsListCell.h"
+#import "ChatsListViewController.h"
 
-@interface ChatsViewController ()
+#import "ChatsListTableViewCell.h"
+
+
+@interface ChatsListViewController ()
 
 @end
 
-@implementation ChatsViewController
+@implementation ChatsListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,7 +45,11 @@
     // 初始化表中数组
     self.chatsList = @[@"Sleepy", @"Sneezy", @"Bashful", @"Happy", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bofur",@"Bombur"];
 
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+    CGRect navBarFrame = self.navigationController.navigationBar.frame;
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+    
+    CGRect r = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - navBarFrame.size.height - tabBarFrame.size.height);
+    self.tableView = [[UITableView alloc] initWithFrame:r
                                                   style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -80,10 +87,10 @@ sectionForSectionIndexTitle:(NSString *)title
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIndentifier = [NSString stringWithFormat:@"cell_%d", indexPath.row];
-    ChatsListCell *cell = (ChatsListCell *)[tableView cellForRowAtIndexPath:indexPath];
+    ChatsListTableViewCell *cell = (ChatsListTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 
     if (cell == nil) {
-        cell = [[ChatsListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier chat:nil];
+        cell = [[ChatsListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier chat:nil];
     }
 
     return cell;

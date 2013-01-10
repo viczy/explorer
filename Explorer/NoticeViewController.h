@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "NoticeCell.h"
+#import "NoticeTableViewCell.h"
 
 @interface NoticeViewController : UIViewController <
                                         UITableViewDelegate,

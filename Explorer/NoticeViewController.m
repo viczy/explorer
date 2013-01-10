@@ -22,6 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -38,7 +39,12 @@
     // 初始化表中数组
     self.listData = @[@"Sleepy", @"Sneezy", @"Bashful", @"Happy", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bofur",@"Bombur"];
 
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+
+    CGRect navBarFrame = self.navigationController.navigationBar.frame;
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+    
+    CGRect r = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - navBarFrame.size.height - tabBarFrame.size.height);
+    self.tableView = [[UITableView alloc] initWithFrame:r
                                                   style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -84,10 +90,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIndentifier = [NSString stringWithFormat:@"cell_%d", indexPath.row];
-    NoticeCell *cell = (NoticeCell *)[tableView cellForRowAtIndexPath:indexPath];
+//    NoticeTableViewCell *cell = (NoticeTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+    
     if (cell == nil) {
-        cell = [[NoticeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier notice:nil];
+        cell = [[NoticeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier notice:nil];
     }
 
     return cell;
@@ -140,21 +148,8 @@
 // 动态设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *username = @"Lanvige";
-    NSString *content = @"今儿@上岸晒太阳的小摩 说要帮忙找人合租房子，想了一下，基本没有合适的且认识的女生可以介绍，，这个年龄段的认识的基本都结婚了或者有了自己的房子或者和老公一起租住，想想自己果然老了";
-
-    // Calu line height.
-    CGFloat contentWidth = 240.000;
-    CGSize titleSize = [username sizeWithFont:[UIFont systemFontOfSize:15]
-                            constrainedToSize:CGSizeMake(contentWidth, 10000)
-                                lineBreakMode:UILineBreakModeWordWrap];
-    CGSize contentSize = [content sizeWithFont:[UIFont systemFontOfSize:14]
-                             constrainedToSize:CGSizeMake(contentWidth, 10000)
-                                 lineBreakMode:UILineBreakModeWordWrap];
-
-    CGFloat height = 5 + titleSize.height + 9 + contentSize.height + 5 + 14 + 10;
-
-    return height;
+    NoticeTableViewCell *cell = (NoticeTableViewCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    return cell.frame.size.height;
 }
 
 // 设置单元格缩进
@@ -184,15 +179,26 @@
     // 从数组中取出当前行内容
     NSString *rowValue = [self.listData objectAtIndex:row];
     NSString *message = [[NSString alloc] initWithFormat:@"You selected%@",rowValue];
+    
     // 弹出警告信息
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
                                                    message:message
                                                   delegate:self
                                          cancelButtonTitle:@"OK"
                                          otherButtonTitles: nil];
-    [alert show];
+//    [alert show];
+    
+    // After one second, unselect the current row
+    [self performSelector:@selector(unselectCurrentRow)
+               withObject:nil afterDelay:.1f];
 }
 
+// 取消Cell的选中
+- (void)unselectCurrentRow
+{
+    // Animate the deselection
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
 
 
 @end

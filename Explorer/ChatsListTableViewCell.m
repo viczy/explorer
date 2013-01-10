@@ -6,11 +6,13 @@
 //  Copyright (c) 2013 Lanvige Jiang. All rights reserved.
 //
 
-#import "ChatsListCell.h"
+#import "ChatsListTableViewCell.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 #import "EPChat.h"
 
-@implementation ChatsListCell
+@implementation ChatsListTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier chat:(EPChat *)chat
 {
@@ -25,7 +27,7 @@
         self.chat = [[EPChat alloc] init];
         self.chat.username = @"Lanvige";
         self.chat.date = @"2013-1-5 16:11";
-        self.chat.content = @"或者和老公一起租住，果然老了...";
+        self.chat.content = @"或者和老公一起租住，果然老了果然老了果然老了";
         //
         [self addController];
         [self addContentController];
@@ -46,6 +48,15 @@
     // Avatar image
     UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 32, 32)];
     avatarImageView.image = [UIImage imageNamed:@"Icon.png"];
+    
+    //设置圆角边框
+    avatarImageView.layer.cornerRadius = 6;
+    avatarImageView.layer.masksToBounds = YES;
+    
+    //设置边框及边框颜色
+    avatarImageView.layer.borderWidth = .5f;
+    avatarImageView.layer.borderColor = [[UIColor grayColor] CGColor];
+    
     [self addSubview:avatarImageView];
 }
 
@@ -89,6 +100,8 @@
     [contentLabel setTextAlignment:UITextAlignmentLeft];
     [contentLabel setTextColor:[UIColor grayColor]];
     [contentLabel setBackgroundColor:[UIColor clearColor]];
+    contentLabel.numberOfLines = 1;
+    contentLabel.lineBreakMode = UILineBreakModeTailTruncation;
     [self addSubview:contentLabel];
 }
 

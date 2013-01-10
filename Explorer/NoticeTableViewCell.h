@@ -10,10 +10,13 @@
 
 @class EPNotice;
 
-@interface NoticeCell : UITableViewCell
+@interface NoticeTableViewCell : UITableViewCell
 {
     CGFloat cellWidth;
     CGFloat cellHeight;
+    
+    UIFont *titleFont;
+    UIFont *contentFont;
     
 //    EPNotice *notice;
 }

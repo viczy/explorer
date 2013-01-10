@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38154372169AFF2100969009 /* ChatsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38154371169AFF2100969009 /* ChatsListCell.m */; };
+		38154372169AFF2100969009 /* ChatsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38154371169AFF2100969009 /* ChatsListTableViewCell.m */; };
 		38154375169AFF6B00969009 /* EPChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38154374169AFF6B00969009 /* EPChat.m */; };
 		385D47A61699781F00731895 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D47A51699781F00731895 /* UIKit.framework */; };
 		385D47A81699781F00731895 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385D47A71699781F00731895 /* Foundation.framework */; };
@@ -23,23 +23,22 @@
 		385D47F41699AA6800731895 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F31699AA6800731895 /* NoticeViewController.m */; };
 		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
-		385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsViewController.m */; };
-		385D48071699AC1C00731895 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48061699AC1C00731895 /* SocialView.xib */; };
-		385D48091699AC2F00731895 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385D48081699AC2F00731895 /* SettingsView.xib */; };
+		385D47FE1699AB6200731895 /* ChatsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsListViewController.m */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
-		38FC2C7D169A5A82009C121C /* NoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C7C169A5A82009C121C /* NoticeCell.m */; };
 		38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C80169A5AD9009C121C /* EPModelBase.m */; };
 		38FC2C84169A5B10009C121C /* EPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C83169A5B10009C121C /* EPNotice.m */; };
 		38FC2C89169A5BFB009C121C /* chats_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FC2C85169A5BFB009C121C /* chats_tabbar.png */; };
 		38FC2C8A169A5BFB009C121C /* notice_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FC2C86169A5BFB009C121C /* notice_tabbar.png */; };
 		38FC2C8B169A5BFB009C121C /* settings_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FC2C87169A5BFB009C121C /* settings_tabbar.png */; };
 		38FC2C8C169A5BFB009C121C /* social_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FC2C88169A5BFB009C121C /* social_tabbar.png */; };
+		38FC2D2D169BC73A009C121C /* UIColor+Explorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2D2C169BC73A009C121C /* UIColor+Explorer.m */; };
+		38FC2D31169BC843009C121C /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2D30169BC843009C121C /* NoticeTableViewCell.m */; };
 		4B1F726DE85248A5AB654678 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 777D73D29F014FBD8AC849F4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38154370169AFF2100969009 /* ChatsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListCell.h; sourceTree = "<group>"; };
-		38154371169AFF2100969009 /* ChatsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListCell.m; sourceTree = "<group>"; };
+		38154370169AFF2100969009 /* ChatsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListTableViewCell.h; sourceTree = "<group>"; };
+		38154371169AFF2100969009 /* ChatsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListTableViewCell.m; sourceTree = "<group>"; };
 		38154373169AFF6B00969009 /* EPChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPChat.h; sourceTree = "<group>"; };
 		38154374169AFF6B00969009 /* EPChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPChat.m; sourceTree = "<group>"; };
 		385D47A11699781F00731895 /* Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,14 +66,10 @@
 		385D47F71699AB3700731895 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
 		385D47F91699AB4A00731895 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		385D47FC1699AB6200731895 /* ChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsViewController.h; sourceTree = "<group>"; };
-		385D47FD1699AB6200731895 /* ChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsViewController.m; sourceTree = "<group>"; };
-		385D48061699AC1C00731895 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
-		385D48081699AC2F00731895 /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		385D47FC1699AB6200731895 /* ChatsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListViewController.h; sourceTree = "<group>"; };
+		385D47FD1699AB6200731895 /* ChatsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListViewController.m; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E199D31699C20E000F30A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		38FC2C7B169A5A82009C121C /* NoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeCell.h; sourceTree = "<group>"; };
-		38FC2C7C169A5A82009C121C /* NoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeCell.m; sourceTree = "<group>"; };
 		38FC2C7F169A5AD9009C121C /* EPModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPModelBase.h; sourceTree = "<group>"; };
 		38FC2C80169A5AD9009C121C /* EPModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPModelBase.m; sourceTree = "<group>"; };
 		38FC2C82169A5B10009C121C /* EPNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPNotice.h; sourceTree = "<group>"; };
@@ -83,6 +78,10 @@
 		38FC2C86169A5BFB009C121C /* notice_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice_tabbar.png; sourceTree = "<group>"; };
 		38FC2C87169A5BFB009C121C /* settings_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_tabbar.png; sourceTree = "<group>"; };
 		38FC2C88169A5BFB009C121C /* social_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social_tabbar.png; sourceTree = "<group>"; };
+		38FC2D2B169BC73A009C121C /* UIColor+Explorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Explorer.h"; sourceTree = "<group>"; };
+		38FC2D2C169BC73A009C121C /* UIColor+Explorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Explorer.m"; sourceTree = "<group>"; };
+		38FC2D2F169BC843009C121C /* NoticeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeTableViewCell.h; sourceTree = "<group>"; };
+		38FC2D30169BC843009C121C /* NoticeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeTableViewCell.m; sourceTree = "<group>"; };
 		777D73D29F014FBD8AC849F4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		885625FB308243E7B22CC871 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -105,6 +104,7 @@
 		385D47961699781E00731895 = {
 			isa = PBXGroup;
 			children = (
+				38FC2D2A169BC70D009C121C /* Categories */,
 				385D47AB1699781F00731895 /* Explorer */,
 				385D47A41699781F00731895 /* Frameworks */,
 				385D47A21699781F00731895 /* Products */,
@@ -163,8 +163,8 @@
 		385D47CE169979BE00731895 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				385D47FC1699AB6200731895 /* ChatsViewController.h */,
-				385D47FD1699AB6200731895 /* ChatsViewController.m */,
+				385D47FC1699AB6200731895 /* ChatsListViewController.h */,
+				385D47FD1699AB6200731895 /* ChatsListViewController.m */,
 				385D47F21699AA6800731895 /* NoticeViewController.h */,
 				385D47F31699AA6800731895 /* NoticeViewController.m */,
 				385D47F91699AB4A00731895 /* SettingsViewController.h */,
@@ -191,12 +191,7 @@
 		385D47D0169979DC00731895 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				385D48061699AC1C00731895 /* SocialView.xib */,
-				385D48081699AC2F00731895 /* SettingsView.xib */,
-				38FC2C7B169A5A82009C121C /* NoticeCell.h */,
-				38FC2C7C169A5A82009C121C /* NoticeCell.m */,
-				38154370169AFF2100969009 /* ChatsListCell.h */,
-				38154371169AFF2100969009 /* ChatsListCell.m */,
+				38FC2D2E169BC7CB009C121C /* Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -231,6 +226,26 @@
 				38FC2C88169A5BFB009C121C /* social_tabbar.png */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		38FC2D2A169BC70D009C121C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				38FC2D2B169BC73A009C121C /* UIColor+Explorer.h */,
+				38FC2D2C169BC73A009C121C /* UIColor+Explorer.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		38FC2D2E169BC7CB009C121C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38FC2D2F169BC843009C121C /* NoticeTableViewCell.h */,
+				38FC2D30169BC843009C121C /* NoticeTableViewCell.m */,
+				38154370169AFF2100969009 /* ChatsListTableViewCell.h */,
+				38154371169AFF2100969009 /* ChatsListTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,8 +308,6 @@
 				385D47DA16997A9C00731895 /* Default@2x.png in Resources */,
 				385D47DB16997A9C00731895 /* Icon.png in Resources */,
 				385D47DC16997A9C00731895 /* Icon@2x.png in Resources */,
-				385D48071699AC1C00731895 /* SocialView.xib in Resources */,
-				385D48091699AC2F00731895 /* SettingsView.xib in Resources */,
 				38E199D01699C203000F30A2 /* Localizable.strings in Resources */,
 				38FC2C89169A5BFB009C121C /* chats_tabbar.png in Resources */,
 				38FC2C8A169A5BFB009C121C /* notice_tabbar.png in Resources */,
@@ -332,12 +345,13 @@
 				385D47F41699AA6800731895 /* NoticeViewController.m in Sources */,
 				385D47F81699AB3700731895 /* SocialViewController.m in Sources */,
 				385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */,
-				385D47FE1699AB6200731895 /* ChatsViewController.m in Sources */,
-				38FC2C7D169A5A82009C121C /* NoticeCell.m in Sources */,
+				385D47FE1699AB6200731895 /* ChatsListViewController.m in Sources */,
 				38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */,
 				38FC2C84169A5B10009C121C /* EPNotice.m in Sources */,
-				38154372169AFF2100969009 /* ChatsListCell.m in Sources */,
+				38154372169AFF2100969009 /* ChatsListTableViewCell.m in Sources */,
 				38154375169AFF6B00969009 /* EPChat.m in Sources */,
+				38FC2D2D169BC73A009C121C /* UIColor+Explorer.m in Sources */,
+				38FC2D31169BC843009C121C /* NoticeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NoticeViewController.h"
-#import "ChatsViewController.h"
+#import "ChatsListViewController.h"
 #import "SocialViewController.h"
 #import "SettingsViewController.h"
 
@@ -27,17 +27,17 @@
     noticeViewController.tabBarItem.image = [UIImage imageNamed:@"notice_tabbar.png"];
     noticeViewController.tabBarItem.badgeValue = @"2";
 
-    ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:nil
+    ChatsListViewController *chatsViewController = [[ChatsListViewController alloc] initWithNibName:nil
                                                                                      bundle:nil];
     chatsViewController.tabBarItem.title = NSLocalizedString(@"chats", @"");
     chatsViewController.tabBarItem.image = [UIImage imageNamed:@"chats_tabbar.png"];
 
-    SocialViewController *socialViewController = [[SocialViewController alloc] initWithNibName:@"SocialView"
+    SocialViewController *socialViewController = [[SocialViewController alloc] initWithNibName:nil
                                                                                         bundle:nil];
     socialViewController.tabBarItem.title = NSLocalizedString(@"social", @"");
     socialViewController.tabBarItem.image = [UIImage imageNamed:@"social_tabbar.png"];
 
-    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView"
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:nil
                                                                                               bundle:nil];
     settingsViewController.tabBarItem.title = NSLocalizedString(@"settings", @"");
     settingsViewController.tabBarItem.image = [UIImage imageNamed:@"settings_tabbar.png"];

@@ -10,7 +10,7 @@
 
 @class EPChat;
 
-@interface ChatsListCell : UITableViewCell
+@interface ChatsListTableViewCell : UITableViewCell
 {
     CGFloat cellWidth;
     CGFloat cellHeight;
