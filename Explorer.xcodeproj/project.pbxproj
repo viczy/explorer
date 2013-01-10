@@ -319,9 +319,9 @@
 		385D47961699781E00731895 = {
 			isa = PBXGroup;
 			children = (
-				38752BED169E8991001D8B0F /* Utils */,
 				38FC2D2A169BC70D009C121C /* Categories */,
 				385D47AB1699781F00731895 /* Explorer */,
+				38752BED169E8991001D8B0F /* Utilities */,
 				385D47A41699781F00731895 /* Frameworks */,
 				385D47A21699781F00731895 /* Products */,
 				385D47D116997A9C00731895 /* Resources */,
@@ -554,13 +554,13 @@
 			path = Emotion;
 			sourceTree = "<group>";
 		};
-		38752BED169E8991001D8B0F /* Utils */ = {
+		38752BED169E8991001D8B0F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				38752BEE169E89B6001D8B0F /* ContentString.h */,
 				38752BEF169E89B6001D8B0F /* ContentString.m */,
 			);
-			name = Utils;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		38FC2D2A169BC70D009C121C /* Categories */ = {
