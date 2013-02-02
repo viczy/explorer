@@ -11,6 +11,7 @@
 #import "ChatsListViewController.h"
 
 #import "ChatsListTableViewCell.h"
+#import "ChatsViewController.h"
 
 
 @interface ChatsListViewController ()
@@ -116,6 +117,13 @@ sectionForSectionIndexTitle:(NSString *)title
 //    indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    ChatsViewController *chatsViewController = [[ChatsViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:chatsViewController animated:YES];
+}
 
 
 @end

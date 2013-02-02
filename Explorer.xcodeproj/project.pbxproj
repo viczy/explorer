@@ -24,6 +24,10 @@
 		385D47F81699AB3700731895 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47F71699AB3700731895 /* SocialViewController.m */; };
 		385D47FB1699AB4A00731895 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FA1699AB4A00731895 /* SettingsViewController.m */; };
 		385D47FE1699AB6200731895 /* ChatsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385D47FD1699AB6200731895 /* ChatsListViewController.m */; };
+		38DDF0EB16BD157B0054146E /* ChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDF0EA16BD157B0054146E /* ChatsViewController.m */; };
+		38DDF0EE16BD198B0054146E /* ChatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDF0ED16BD198B0054146E /* ChatsTableViewCell.m */; };
+		38DDF0F216BD19B80054146E /* ChatsHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDF0F116BD19B80054146E /* ChatsHeaderTableViewCell.m */; };
+		38DDF0F516BD1C3C0054146E /* ChatsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDF0F416BD1C3C0054146E /* ChatsTableView.m */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
 		38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C80169A5AD9009C121C /* EPModelBase.m */; };
 		38FC2C84169A5B10009C121C /* EPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C83169A5B10009C121C /* EPNotice.m */; };
@@ -68,6 +72,15 @@
 		385D47FA1699AB4A00731895 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		385D47FC1699AB6200731895 /* ChatsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsListViewController.h; sourceTree = "<group>"; };
 		385D47FD1699AB6200731895 /* ChatsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsListViewController.m; sourceTree = "<group>"; };
+		38DDF0E916BD157B0054146E /* ChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsViewController.h; sourceTree = "<group>"; };
+		38DDF0EA16BD157B0054146E /* ChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsViewController.m; sourceTree = "<group>"; };
+		38DDF0EC16BD198B0054146E /* ChatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsTableViewCell.h; sourceTree = "<group>"; };
+		38DDF0ED16BD198B0054146E /* ChatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsTableViewCell.m; sourceTree = "<group>"; };
+		38DDF0F016BD19B80054146E /* ChatsHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsHeaderTableViewCell.h; sourceTree = "<group>"; };
+		38DDF0F116BD19B80054146E /* ChatsHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsHeaderTableViewCell.m; sourceTree = "<group>"; };
+		38DDF0F316BD1C3C0054146E /* ChatsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsTableView.h; sourceTree = "<group>"; };
+		38DDF0F416BD1C3C0054146E /* ChatsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsTableView.m; sourceTree = "<group>"; };
+		38DDF0F616BD1E500054146E /* ChatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsTableViewDataSource.h; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E199D31699C20E000F30A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38FC2C7F169A5AD9009C121C /* EPModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPModelBase.h; sourceTree = "<group>"; };
@@ -163,6 +176,7 @@
 		385D47CE169979BE00731895 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38DDF0EF16BD19930054146E /* Chats */,
 				385D47FC1699AB6200731895 /* ChatsListViewController.h */,
 				385D47FD1699AB6200731895 /* ChatsListViewController.m */,
 				385D47F21699AA6800731895 /* NoticeViewController.h */,
@@ -226,6 +240,22 @@
 				38FC2C88169A5BFB009C121C /* social_tabbar.png */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		38DDF0EF16BD19930054146E /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				38DDF0E916BD157B0054146E /* ChatsViewController.h */,
+				38DDF0EA16BD157B0054146E /* ChatsViewController.m */,
+				38DDF0EC16BD198B0054146E /* ChatsTableViewCell.h */,
+				38DDF0ED16BD198B0054146E /* ChatsTableViewCell.m */,
+				38DDF0F016BD19B80054146E /* ChatsHeaderTableViewCell.h */,
+				38DDF0F116BD19B80054146E /* ChatsHeaderTableViewCell.m */,
+				38DDF0F316BD1C3C0054146E /* ChatsTableView.h */,
+				38DDF0F416BD1C3C0054146E /* ChatsTableView.m */,
+				38DDF0F616BD1E500054146E /* ChatsTableViewDataSource.h */,
+			);
+			name = Chats;
 			sourceTree = "<group>";
 		};
 		38FC2D2A169BC70D009C121C /* Categories */ = {
@@ -352,6 +382,10 @@
 				38154375169AFF6B00969009 /* EPChat.m in Sources */,
 				38FC2D2D169BC73A009C121C /* UIColor+Explorer.m in Sources */,
 				38FC2D31169BC843009C121C /* NoticeTableViewCell.m in Sources */,
+				38DDF0EB16BD157B0054146E /* ChatsViewController.m in Sources */,
+				38DDF0EE16BD198B0054146E /* ChatsTableViewCell.m in Sources */,
+				38DDF0F216BD19B80054146E /* ChatsHeaderTableViewCell.m in Sources */,
+				38DDF0F516BD1C3C0054146E /* ChatsTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
