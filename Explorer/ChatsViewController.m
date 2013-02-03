@@ -21,11 +21,14 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+
     if (self) {
         // Custom initialization
         self.tableView = [[ChatsTableView alloc] initWithFrame:self.view.frame];
+        self.tableView.chatsDataSource = self;
         [self.view addSubview:self.tableView];
     }
+
     return self;
 }
 
@@ -33,30 +36,35 @@
 - (void)buildDemoData
 {
     EPChat *chat1 = [[EPChat alloc] init];
+
     chat1.content = @"Wow";
     chat1.username = @"Lanvige";
     chat1.type = BubbleTypeMine;
-    
-    
+
+
     self.listData = [[NSMutableArray alloc] initWithObjects:chat1, nil];
-    self.tableView.chatsDataSource = self;
-    
+
+
     [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
+    
+    [self buildDemoData];
 }
 
 
 
-#pragma mark - UIBubbleTableViewDataSource implementation
+#pragma mark -
+#pragma mark UIBubbleTableViewDataSource implementation
 
-- (NSInteger)rowsForBubbleTable:(ChatsTableView *)tableView
+- (NSInteger)rowsForChatsTableView:(ChatsTableView *)tableView
 {
-    return [self.listData count];
+    // return [self.listData count];
+    return 1;
 }
 
 - (EPChat *)bubbleTableView:(ChatsTableView *)tableView dataForRow:(NSInteger)row
@@ -65,11 +73,17 @@
 }
 
 
+#pragma mark -
+#pragma mark
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+
+#pragma mark -
+#pragma mark - Memory management
 
 - (void)didReceiveMemoryWarning
 {

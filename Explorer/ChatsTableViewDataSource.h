@@ -16,8 +16,7 @@
 @optional
 
 @required
-
-- (NSInteger)rowsForBubbleTable:(ChatsTableView *)tableView;
+- (NSInteger)rowsForChatsTableView:(ChatsTableView *)tableView;
 - (EPChat *)bubbleTableView:(ChatsTableView *)tableView dataForRow:(NSInteger)row;
 
 @end

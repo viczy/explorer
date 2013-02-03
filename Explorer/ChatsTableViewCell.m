@@ -25,9 +25,11 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+
     if (self) {
         // Initialization code
     }
+
     return self;
 }
 
@@ -42,68 +44,72 @@
 
 - (void)setDataInternal:(EPChat *)value
 {
-	self.chatData = value;
-	[self setupInternalData];
+    self.chatData = value;
+    [self setupInternalData];
 }
 
-- (void) setupInternalData
+- (void)setupInternalData
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    if (!self.bubbleImageView)
-    {
+
+    if (!self.bubbleImageView) {
         self.bubbleImageView = [[UIImageView alloc] init];
         [self addSubview:self.bubbleImageView];
     }
-    
+
     NSBubbleType type = self.chatData.type;
-    
+
 //    CGFloat width = self.chatData.view.frame.size.width;
 //    CGFloat height = self.chatData.view.frame.size.height;
-    
+
     CGFloat width = 320;
     CGFloat height = 200;
-    
+
     CGFloat x = (type == BubbleTypeSomeoneElse) ? 0 : self.frame.size.width - width - self.chatData.insets.left - self.chatData.insets.right;
     CGFloat y = 0;
-    
-    // Adjusting the x coordinate for avatar
-        [self.avatarImageView removeFromSuperview];
 
-        self.avatarImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"missingAvatar.png"]];
-    
-        self.avatarImageView.layer.cornerRadius = 9.0;
-        self.avatarImageView.layer.masksToBounds = YES;
-        self.avatarImageView.layer.borderColor = [UIColor colorWithWhite:0.0 alpha:0.2].CGColor;
-        self.avatarImageView.layer.borderWidth = 1.0;
-        
-        CGFloat avatarX = (type == BubbleTypeSomeoneElse) ? 2 : self.frame.size.width - 52;
-        CGFloat avatarY = self.frame.size.height - 50;
-        
-        self.avatarImageView.frame = CGRectMake(avatarX, avatarY, 50, 50);
-        [self addSubview:self.avatarImageView];
-        
-        CGFloat delta = self.frame.size.height - (self.chatData.insets.top + self.chatData.insets.bottom);
-        if (delta > 0) y = delta;
-        
-        if (type == BubbleTypeSomeoneElse) x += 54;
-        if (type == BubbleTypeMine) x -= 54;
-    
+    // Adjusting the x coordinate for avatar
+    [self.avatarImageView removeFromSuperview];
+
+    self.avatarImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"missingAvatar.png"]];
+
+    self.avatarImageView.layer.cornerRadius = 9.0;
+    self.avatarImageView.layer.masksToBounds = YES;
+    self.avatarImageView.layer.borderColor = [UIColor colorWithWhite:0.0 alpha:0.2].CGColor;
+    self.avatarImageView.layer.borderWidth = 1.0;
+
+    CGFloat avatarX = (type == BubbleTypeSomeoneElse) ? 2 : self.frame.size.width - 52;
+    CGFloat avatarY = self.frame.size.height - 50;
+
+    self.avatarImageView.frame = CGRectMake(avatarX, avatarY, 50, 50);
+    [self addSubview:self.avatarImageView];
+
+    CGFloat delta = self.frame.size.height - (self.chatData.insets.top + self.chatData.insets.bottom);
+
+    if (delta > 0) {
+        y = delta;
+    }
+
+    if (type == BubbleTypeSomeoneElse) {
+        x += 54;
+    }
+
+    if (type == BubbleTypeMine) {
+        x -= 54;
+    }
+
     [self.customView removeFromSuperview];
-    self.customView = self.data.view;
-    self.customView.frame = CGRectMake(x + self.data.insets.left, y + self.data.insets.top, width, height);
+    self.customView.frame = CGRectMake(x + self.chatData.insets.left, y + self.chatData.insets.top, width, height);
     [self.contentView addSubview:self.customView];
-    
-    if (type == BubbleTypeSomeoneElse)
-    {
-        self.bubbleImage.image = [[UIImage imageNamed:@"bubbleSomeone.png"] stretchableImageWithLeftCapWidth:21 topCapHeight:14];
-        
+
+    if (type == BubbleTypeSomeoneElse) {
+        self.bubbleImageView.image = [[UIImage imageNamed:@"bubbleSomeone.png"] stretchableImageWithLeftCapWidth:21 topCapHeight:14];
+
+    } else {
+        self.bubbleImageView.image = [[UIImage imageNamed:@"bubbleMine.png"] stretchableImageWithLeftCapWidth:15 topCapHeight:14];
     }
-    else {
-        self.bubbleImage.image = [[UIImage imageNamed:@"bubbleMine.png"] stretchableImageWithLeftCapWidth:15 topCapHeight:14];
-    }
-    
-    self.bubbleImage.frame = CGRectMake(x, y, width + self.data.insets.left + self.data.insets.right, height + self.data.insets.top + self.data.insets.bottom);
+
+    self.bubbleImageView.frame = CGRectMake(x, y, width + self.chatData.insets.left + self.chatData.insets.right, height + self.chatData.insets.top + self.chatData.insets.bottom);
 }
 
 @end

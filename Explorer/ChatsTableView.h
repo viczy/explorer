@@ -10,8 +10,7 @@
 
 #import "ChatsTableViewDataSource.h"
 
-typedef enum _NSBubbleTypingType
-{
+typedef enum _NSBubbleTypingType {
     NSBubbleTypingTypeNobody = 0,
     NSBubbleTypingTypeMe = 1,
     NSBubbleTypingTypeSomebody = 2
@@ -19,9 +18,9 @@ typedef enum _NSBubbleTypingType
 
 @interface ChatsTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, assign) IBOutlet id<ChatsTableViewDataSource> chatsDataSource;
-@property (nonatomic) NSTimeInterval snapInterval;
-@property (nonatomic) NSBubbleTypingType typingBubble;
-@property (nonatomic, retain) NSMutableArray *bubbleSection;
+@property (nonatomic, weak) id<ChatsTableViewDataSource> chatsDataSource;
+@property (nonatomic, assign) NSTimeInterval snapInterval;
+@property (nonatomic, assign) NSBubbleTypingType typingBubble;
+@property (nonatomic, strong) NSMutableArray *bubbleSection;
 
 @end
