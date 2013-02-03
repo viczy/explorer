@@ -20,6 +20,8 @@
     self.backgroundColor = [UIColor clearColor];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     assert(self.style == UITableViewStylePlain);
+    
+    self.backgroundColor = [UIColor whiteColor];
 
     self.delegate = self;
     self.dataSource = self;
@@ -66,17 +68,17 @@
     int count = 0;
     self.bubbleSection = [[NSMutableArray alloc] init];
 
-//    NSLog(@"%d", [self.chatsDataSource rowsForChatsTableView:self]);
-//
-//    if (self.chatsDataSource && (count = [self.chatsDataSource rowsForChatsTableView:self]) > 0) {
-//        NSMutableArray *bubbleData = [[NSMutableArray alloc] initWithCapacity:count];
-//
-//        for (int i = 0; i < count; i++) {
-//            NSObject *object = [self.chatsDataSource bubbleTableView:self dataForRow:i];
-//            assert([object isKindOfClass:[EPChat class]]);
-//            [bubbleData addObject:object];
-//        }
-//
+    NSLog(@"%d", [self.chatsDataSource rowsForChatsTableView:self]);
+
+    if (self.chatsDataSource && (count = [self.chatsDataSource rowsForChatsTableView:self]) > 0) {
+        NSMutableArray *bubbleData = [[NSMutableArray alloc] initWithCapacity:count];
+
+        for (int i = 0; i < count; i++) {
+            NSObject *object = [self.chatsDataSource bubbleTableView:self dataForRow:i];
+            assert([object isKindOfClass:[EPChat class]]);
+            [bubbleData addObject:object];
+        }
+
 //        [bubbleData sortUsingComparator:^NSComparisonResult (id obj1, id obj2)
 //         {
 //             EPChat *chatData1 = (EPChat *) obj1;
@@ -84,22 +86,22 @@
 //
 //             return [chatData1.date compare:chatData2.date];
 //         }];
-//
-//        NSDate *last = [NSDate dateWithTimeIntervalSince1970:0];
-//        NSMutableArray *currentSection = nil;
-//
-//        for (int i = 0; i < count; i++) {
-//            EPChat *data = (EPChat *) [bubbleData objectAtIndex:i];
-//
-//            if ([data.date timeIntervalSinceDate:last] > self.snapInterval) {
-//                currentSection = [[NSMutableArray alloc] init];
-//                [self.bubbleSection addObject:currentSection];
-//            }
-//
-//            [currentSection addObject:data];
-//            last = data.date;
-//        }
-//    }
+
+        NSDate *last = [NSDate dateWithTimeIntervalSince1970:0];
+        NSMutableArray *currentSection = nil;
+
+        for (int i = 0; i < count; i++) {
+            EPChat *data = (EPChat *) [bubbleData objectAtIndex:i];
+
+            if ([data.date timeIntervalSinceDate:last] > self.snapInterval) {
+                currentSection = [[NSMutableArray alloc] init];
+                [self.bubbleSection addObject:currentSection];
+            }
+
+            [currentSection addObject:data];
+            last = data.date;
+        }
+    }
 
     [super reloadData];
 }
@@ -118,7 +120,6 @@
         result++;
     }
 
-    return 1;
     return result;
 }
 
@@ -128,8 +129,7 @@
     if (section >= [self.bubbleSection count]) {
         return 1;
     }
-
-    return 1;
+    
     return [[self.bubbleSection objectAtIndex:section] count] + 1;
 }
 
@@ -190,7 +190,7 @@
         cell = [[ChatsTableViewCell alloc] init];
     }
 
-    cell.chatData = data;
+    cell.data = data;
 
     return cell;
 }

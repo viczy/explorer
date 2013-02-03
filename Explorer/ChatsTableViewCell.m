@@ -33,6 +33,12 @@
     return self;
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+	[self setupInternalData];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -44,7 +50,7 @@
 
 - (void)setDataInternal:(EPChat *)value
 {
-    self.chatData = value;
+    self.data = value;
     [self setupInternalData];
 }
 
@@ -57,7 +63,7 @@
         [self addSubview:self.bubbleImageView];
     }
 
-    NSBubbleType type = self.chatData.type;
+    NSBubbleType type = self.data.type;
 
 //    CGFloat width = self.chatData.view.frame.size.width;
 //    CGFloat height = self.chatData.view.frame.size.height;
@@ -65,7 +71,7 @@
     CGFloat width = 320;
     CGFloat height = 200;
 
-    CGFloat x = (type == BubbleTypeSomeoneElse) ? 0 : self.frame.size.width - width - self.chatData.insets.left - self.chatData.insets.right;
+    CGFloat x = (type == BubbleTypeSomeoneElse) ? 0 : self.frame.size.width - width - self.data.insets.left - self.data.insets.right;
     CGFloat y = 0;
 
     // Adjusting the x coordinate for avatar
@@ -84,7 +90,7 @@
     self.avatarImageView.frame = CGRectMake(avatarX, avatarY, 50, 50);
     [self addSubview:self.avatarImageView];
 
-    CGFloat delta = self.frame.size.height - (self.chatData.insets.top + self.chatData.insets.bottom);
+    CGFloat delta = self.frame.size.height - (self.data.insets.top + self.data.insets.bottom);
 
     if (delta > 0) {
         y = delta;
@@ -99,7 +105,7 @@
     }
 
     [self.customView removeFromSuperview];
-    self.customView.frame = CGRectMake(x + self.chatData.insets.left, y + self.chatData.insets.top, width, height);
+    self.customView.frame = CGRectMake(x + self.data.insets.left, y + self.data.insets.top, width, height);
     [self.contentView addSubview:self.customView];
 
     if (type == BubbleTypeSomeoneElse) {
@@ -109,7 +115,7 @@
         self.bubbleImageView.image = [[UIImage imageNamed:@"bubbleMine.png"] stretchableImageWithLeftCapWidth:15 topCapHeight:14];
     }
 
-    self.bubbleImageView.frame = CGRectMake(x, y, width + self.chatData.insets.left + self.chatData.insets.right, height + self.chatData.insets.top + self.chatData.insets.bottom);
+    self.bubbleImageView.frame = CGRectMake(x, y, width + self.data.insets.left + self.data.insets.right, height + self.data.insets.top + self.data.insets.bottom);
 }
 
 @end

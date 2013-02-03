@@ -12,6 +12,6 @@
 
 @interface ChatsTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) EPChat *chatData;
+@property (nonatomic, strong) EPChat *data;
 
 @end

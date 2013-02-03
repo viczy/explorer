@@ -40,9 +40,16 @@
     chat1.content = @"Wow";
     chat1.username = @"Lanvige";
     chat1.type = BubbleTypeMine;
+    chat1.date = [NSDate dateWithTimeIntervalSinceNow:-300];
 
 
-    self.listData = [[NSMutableArray alloc] initWithObjects:chat1, nil];
+    EPChat *chat2 = [[EPChat alloc] init];
+    chat2.content = @"";
+    chat2.username = @"Norman";
+    chat2.type = BubbleTypeSomeoneElse;
+    chat2.date = [NSDate dateWithTimeIntervalSinceNow:-320];
+    
+    self.listData = [[NSMutableArray alloc] initWithObjects:chat1, chat2, nil];
 
 
     [self.tableView reloadData];
@@ -63,8 +70,7 @@
 
 - (NSInteger)rowsForChatsTableView:(ChatsTableView *)tableView
 {
-    // return [self.listData count];
-    return 1;
+    return [self.listData count];
 }
 
 - (EPChat *)bubbleTableView:(ChatsTableView *)tableView dataForRow:(NSInteger)row
