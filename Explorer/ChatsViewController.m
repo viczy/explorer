@@ -24,7 +24,11 @@
 
     if (self) {
         // Custom initialization
-        self.tableView = [[ChatsTableView alloc] initWithFrame:self.view.frame];
+        CGRect navBarFrame = self.navigationController.navigationBar.frame;
+        CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+
+        CGRect r = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - navBarFrame.size.height - tabBarFrame.size.height);
+        self.tableView = [[ChatsTableView alloc] initWithFrame:r];
         self.tableView.chatsDataSource = self;
         [self.view addSubview:self.tableView];
     }

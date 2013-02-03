@@ -175,7 +175,7 @@
         if (cell == nil) {
             cell = [[ChatsHeaderTableViewCell alloc] init];
         }
-
+        
         cell.date = data.date;
 
         return cell;
