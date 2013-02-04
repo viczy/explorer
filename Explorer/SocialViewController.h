@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SocialViewController : UIViewController
+@interface SocialViewController : UIViewController <
+                                        UITableViewDelegate,
+                                        UITableViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *listData;
+@property (nonatomic, strong) UITableViewCell *tableViewCell;
 
 @end

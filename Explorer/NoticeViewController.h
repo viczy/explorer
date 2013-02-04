@@ -13,13 +13,10 @@
 @interface NoticeViewController : UIViewController <
                                         UITableViewDelegate,
                                         UITableViewDataSource>
-{
-//    NSMutableArray *notices;
-//    UITableView *tableView;
-}
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *listData;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UITableViewCell *tableViewCell;
 
 @end

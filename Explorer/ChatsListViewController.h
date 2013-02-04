@@ -13,6 +13,7 @@
                                         UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @property (nonatomic, strong) NSArray *chatsList;
 
 @end
