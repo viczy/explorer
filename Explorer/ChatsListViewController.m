@@ -44,7 +44,7 @@
                                               action:@selector(addSharing:)];
 
     // 初始化表中数组
-    self.chatsList = @[@"Sleepy", @"Sneezy", @"Bashful", @"Happy", @"Grumpy",@"Dopey", @"Thorin", @"Dorin", @"Nori", @"Ori", @"Balin", @"Dwalin", @"Fili", @"Kili", @"Oin", @"Gloin", @"Bofur",@"Bombur"];
+    self.chatsList = [NSMutableArray arrayWithArray:@[@"Sleepy"]];
 
     CGRect navBarFrame = self.navigationController.navigationBar.frame;
     CGRect tabBarFrame = self.tabBarController.tabBar.frame;
@@ -125,5 +125,25 @@ sectionForSectionIndexTitle:(NSString *)title
     [self.navigationController pushViewController:chatsViewController animated:YES];
 }
 
+
+#pragma mark -
+#pragma mark Table editing
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // remove the data in list.
+        [self.chatsList removeObjectAtIndex:indexPath.row];
+        // Remove the cell in tableview with animation.
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [tableView reloadData];
+    }   
+}
 
 @end

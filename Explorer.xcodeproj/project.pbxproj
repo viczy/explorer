@@ -39,6 +39,8 @@
 		38DDF0F216BD19B80054146E /* ChatsHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDF0F116BD19B80054146E /* ChatsHeaderTableViewCell.m */; };
 		38DDF0F516BD1C3C0054146E /* ChatsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDF0F416BD1C3C0054146E /* ChatsTableView.m */; };
 		38E199D01699C203000F30A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E199D21699C203000F30A2 /* Localizable.strings */; };
+		38FBC9A516E8418A0004D2AA /* cell_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FBC9A316E8418A0004D2AA /* cell_arrow.png */; };
+		38FBC9A616E8418A0004D2AA /* cell_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FBC9A416E8418A0004D2AA /* cell_arrow@2x.png */; };
 		38FC2C81169A5AD9009C121C /* EPModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C80169A5AD9009C121C /* EPModelBase.m */; };
 		38FC2C84169A5B10009C121C /* EPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC2C83169A5B10009C121C /* EPNotice.m */; };
 		38FC2C89169A5BFB009C121C /* chats_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FC2C85169A5BFB009C121C /* chats_tabbar.png */; };
@@ -103,6 +105,8 @@
 		38DDF0F616BD1E500054146E /* ChatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsTableViewDataSource.h; sourceTree = "<group>"; };
 		38E199D11699C203000F30A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E199D31699C20E000F30A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38FBC9A316E8418A0004D2AA /* cell_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arrow.png; sourceTree = "<group>"; };
+		38FBC9A416E8418A0004D2AA /* cell_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_arrow@2x.png"; sourceTree = "<group>"; };
 		38FC2C7F169A5AD9009C121C /* EPModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPModelBase.h; sourceTree = "<group>"; };
 		38FC2C80169A5AD9009C121C /* EPModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPModelBase.m; sourceTree = "<group>"; };
 		38FC2C82169A5B10009C121C /* EPNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPNotice.h; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 		385D47D216997A9C00731895 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				38FBC9A216E8418A0004D2AA /* Control */,
 				384AED7016BE64C300B21093 /* Chats */,
 				385D480A1699B0C900731895 /* Tabbar */,
 				385D47D316997A9C00731895 /* Default-568h@2x.png */,
@@ -294,6 +299,15 @@
 				38DDF0EA16BD157B0054146E /* ChatsViewController.m */,
 			);
 			name = Chats;
+			sourceTree = "<group>";
+		};
+		38FBC9A216E8418A0004D2AA /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				38FBC9A316E8418A0004D2AA /* cell_arrow.png */,
+				38FBC9A416E8418A0004D2AA /* cell_arrow@2x.png */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 		38FC2D2A169BC70D009C121C /* Categories */ = {
@@ -391,6 +405,8 @@
 				384AED8216BE64C300B21093 /* typingMine@2x.png in Resources */,
 				384AED8316BE64C300B21093 /* typingSomeone.png in Resources */,
 				384AED8416BE64C300B21093 /* typingSomeone@2x.png in Resources */,
+				38FBC9A516E8418A0004D2AA /* cell_arrow.png in Resources */,
+				38FBC9A616E8418A0004D2AA /* cell_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
